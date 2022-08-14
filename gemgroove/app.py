@@ -10,7 +10,7 @@ w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 @st.cache(allow_output_mutation=True)
 def load_contract():
 
-          with open(Path('./contracts/compiled/gemgroove_abi.json')) as f:
+          with open(Path('./contracts/compiled/music2blockchain_abi.json')) as f:
               gemgroove_abi = json.load(f) 
           contract_address = ("0xDb1CC195c06223a48A6ab8a9B258Dd3faE761684")
           
@@ -23,13 +23,13 @@ def load_contract():
           return contract 
 contract = load_contract()         
           
-st.title("Turn your song into a GemGroove!")
+st.title("Turn your song into a Music2Blockchain!")
 accounts = w3.eth.accounts
-address = st.selectbox("Select Jam Owner", options=accounts)
-gemgroove_uri = st.text_input("The URI to your Jam")
+address = st.selectbox("Select Song Owner", options=accounts)
+gemgroove_uri = st.text_input("The URI to your Jam - your file on IPFS")
           
 if st.button("Mint my Jam!"):
-    tx_hash = contract.functions.registerGemGroove(address, gemgroove_uri).transact({
+    tx_hash = contract.functions.registermusic2blockchain(address, music2blockchain_uri).transact({
         "from": address,
         "gas": 1000000
     })
