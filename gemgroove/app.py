@@ -28,7 +28,7 @@ accounts = w3.eth.accounts
 address = st.selectbox("Select Song Owner", options=accounts)
 gemgroove_uri = st.text_input("The URI to your Jam - your file on IPFS")
           
-if st.button("Mint my Jam!"):
+if st.button("Mint my Song!"):
     tx_hash = contract.functions.registermusic2blockchain(address, music2blockchain_uri).transact({
         "from": address,
         "gas": 1000000
