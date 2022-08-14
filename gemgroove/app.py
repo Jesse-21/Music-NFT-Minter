@@ -11,12 +11,12 @@ w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 def load_contract():
 
           with open(Path('./contracts/compiled/music2blockchain_abi.json')) as f:
-              gemgroove_abi = json.load(f) 
+              music2blockchain_abi = json.load(f) 
           contract_address = ("0xDb1CC195c06223a48A6ab8a9B258Dd3faE761684")
           
           contract = w3.eth.contract(
               address=contract_address,
-              abi=gemgroove_abi
+              abi=music2blockchain_abi
           )
 
 
