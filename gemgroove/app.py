@@ -23,10 +23,10 @@ def load_contract():
           return contract 
 contract = load_contract()         
           
-st.title("Turn your song into a Music2Blockchain!")
+st.title("Turn your song into a Music2Blockchain NFT!")
 accounts = w3.eth.accounts
 address = st.selectbox("Select Song Owner", options=accounts)
-gemgroove_uri = st.text_input("The URI to your Jam - your file on IPFS")
+gemgroove_uri = st.text_input("The URI to your song - your file on IPFS")
           
 if st.button("Mint my Song!"):
     tx_hash = contract.functions.registermusic2blockchain(address, music2blockchain_uri).transact({
