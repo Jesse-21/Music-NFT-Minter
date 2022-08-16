@@ -89,7 +89,7 @@
 				"type": "string"
 			}
 		],
-		"name": "registerGemGroove",
+		"name": "registerMusic2Blockchain",
 		"outputs": [
 			{
 				"internalType": "uint256",
