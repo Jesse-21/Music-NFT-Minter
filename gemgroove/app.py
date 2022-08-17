@@ -12,7 +12,7 @@ def load_contract():
 
           with open(Path('./contracts/compiled/music2blockchain_abi.json')) as f:
               music2blockchain_abi = json.load(f) 
-          contract_address = ("0xDb1CC195c06223a48A6ab8a9B258Dd3faE761684")
+          contract_address = ("0x9028D87B4F631bB28D30b7CAd377542FE2955Cc8")
           
           contract = w3.eth.contract(
               address=contract_address,
